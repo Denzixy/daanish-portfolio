@@ -1,6 +1,12 @@
+:root {
+    --background: #0a0a0a;
+    --text: #f5f5f5;
+    --muted: #888888;
+    --border: #333333;
+}
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--background);
+    color: var(--text);
     font-family: Arial, sans-serif;
     margin: 0;
 }
@@ -11,10 +17,10 @@ nav {
     padding: 25px 60px;
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: var(--background);
 }
 nav a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
@@ -26,31 +32,37 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px;
+    padding: 80px 60px;
 }
 #home h1 {
-    font-size: 80px;
+    font-size: clamp(3.5rem, 10vw, 8rem);
     margin: 0;
 }
 .a1 {
     font-size: 14px;
     letter-spacing: 4px;
-    margin: 0;
+    color: var(--muted);
+    margin: 0 0 15px 0;
 }
 #home h2 {
-    font-size: 24px;
-    font-weight: normal;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 400;
+    color: var(--muted);
     margin: 20px 0;
 }
 #home > p:not(.a1) {
     max-width: 500px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 #home a {
     display: inline-block;
     padding: 14px 24px;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid var(--text);
+    color: var(--text);
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2 ease;
 }
 .hero-buttons {
     display: flex;
@@ -63,4 +75,8 @@ nav a:hover {
 .nav-links {
     display: flex;
     gap: 30px;
+}
+#home a:hover {
+    background-color: var(--text);
+    color: var(--background);
 }
