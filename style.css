@@ -6,12 +6,20 @@ body {
 }
 nav {
     display: flex;
-    gap: 30px;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    position: sticky;
+    top: 0;
+    background-color: black;
 }
 nav a {
     color: white;
     text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+nav a:hover {
+    opacity: 0.6;
 }
 #home {
     min-height: 80vh;
@@ -47,4 +55,12 @@ nav a {
 .hero-buttons {
     display: flex;
     gap: 15px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
