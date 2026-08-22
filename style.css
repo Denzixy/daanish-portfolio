@@ -80,3 +80,33 @@ nav a:hover {
     background-color: var(--text);
     color: var(--background);
 }
+.section-heading {
+    margin-bottom: 40px;
+}
+.section-heading h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0;
+}
+#about {
+    padding: 120px 60px;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.about-content p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 600px;
+}
+@media (max-width: 768px) {
+    #home,
+    #about {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
