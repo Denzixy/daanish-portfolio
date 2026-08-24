@@ -103,6 +103,7 @@ body {
     width: 100%;
     height: auto;
     border: 1px solid var(--border);
+    border-radius: 16px;
 }
 .gallery-grid {
     display: grid;
@@ -156,6 +157,21 @@ body {
 .project-learning li {
     margin-bottom: 12px;
     color: var(--muted);
+}
+.site-logo {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    z-index: 1000;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.04em;
+    transition: opacity 0.2 ease;
+}
+.site-logo:hover {
+    opacity: 0.6;
 }
 .hero-content {
     animation: fadeUp 0.8s ease forwards;
@@ -495,6 +511,10 @@ footer {
     }
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+    .site-logo {
+        top: 20px;
+        left: 25px;
     }
 }
 @media (prefers-reduced-motion: reduce) {
