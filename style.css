@@ -30,6 +30,32 @@ body {
         transform: translateY(0);
     }
 }
+.project-link {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2 ease;
+}
+.project-link:hover {
+    transform: translateX(5px);
+}
+.project-link::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    vertical-align: middle;
+    transition: width 0.2 ease;
+}
+.project-link:hover::after {
+    width: 30px;
+    margin-left: 8px;
+}
 .hero-content {
     animation: fadeUp 0.8s ease forwards;
 }
@@ -159,7 +185,7 @@ nav a:hover {
     border-color: var(--text);
 }
 .project-tech {
-    margin-top: auto;
+    margin: 0;
     color: var(--text);
     font-size: 14px;
 }
