@@ -215,6 +215,45 @@ nav a:hover {
     color: var(--muted);
     line-height: 1.7;
 }
+#contact {
+    padding: 120px 60px;
+}
+.contact-content {
+    max-width: 700px;
+}
+.contact-content > p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+.contact-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.contact-links a {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    transition: 
+        background-color 0.2 ease,
+        color 0.2 ease,
+        border-color 0.2 ease;
+}
+.contact-links a:hover {
+    background-color: var(--text);
+    color: var(--background);
+    border-color: var(--text);
+}
+footer {
+    padding: 40px 60px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+}
 @media (max-width: 768px) {
     #home,
     #about {
@@ -249,5 +288,9 @@ nav a:hover {
     .education-item {
         grid-template-columns: 1fr;
         gap: 10px;
+    }
+    footer {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
