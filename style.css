@@ -509,6 +509,9 @@ footer {
         grid-template-columns: 1fr;
         gap: 50px;
     }
+    .project-card.is-active {
+        transform: translateY(-5px);
+    }
     .gallery-grid {
         grid-template-columns: 1fr;
     }

@@ -9,3 +9,9 @@ links.forEach(link => {
         navLinks.classList.remove("active");
     });
 });
+const projectCards = document.querySelectorAll(".project-card");
+projectCards.forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("is-active");
+    });
+});
