@@ -12,6 +12,17 @@ links.forEach(link => {
 const projectCards = document.querySelectorAll(".project-card");
 projectCards.forEach(card => {
     card.addEventListener("click", () => {
-        card.classList.toggle("is-active");
+        if (card.classList.contains("is-active")) {
+            card.classList.remove("is-active");
+        } else {
+            card.classList.add("is-active");
+        }
     });
+});
+document.addEventListener("click", event => {
+    if (!event.target.closest(".project-card")) {
+        projectCards.forEach(card => {
+            card.classList.remove("is-active");
+        });
+    }
 });
